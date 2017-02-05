@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 5, 2017 4:27:55 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="bean.Records" table="RECORDS">
+        <id name="recordId" type="int">
+            <column name="RECORDID" />
+            <generator class="identity" />
+        </id>
+        <property name="uniqueId" type="java.lang.String">
+            <column name="UNIQUEID" />
+        </property>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="contactNumber" type="java.lang.String">
+            <column name="CONTACTNUMBER" />
+        </property>
+       <component name="address">
+       	<property name="street" type="java.lang.String"></property>
+       	<property name="city" type="java.lang.String"></property>
+       	<property name="state" type="java.lang.String"></property>
+       	<property name="country" type="java.lang.String"></property>
+       	<property name="pin" type="java.lang.String"></property>
+       	
+       </component>
+       <component name="details" >
+       	<property name="type" type="java.lang.String"></property>
+       	<property name="description" type="java.lang.String"></property>
+       </component>
+    </class>
+</hibernate-mapping>
